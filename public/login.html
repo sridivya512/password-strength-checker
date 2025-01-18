@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Login</h2>
+        
+        <!-- Username input field for login -->
+        <input type="text" id="loginUsernameInput" placeholder="Enter your username" required>
+        
+        <!-- Password input field for login -->
+        <div class="password-container">
+            <input type="password" id="loginPasswordInput" placeholder="Enter your password" required>
+            <span id="toggleLoginPassword" class="fa-solid fa-eye"></span> <!-- Eye Icon -->
+        </div>
+
+        <!-- Login button -->
+        <button id="loginButton">Login</button>
+
+        <div id="loginMessage" style="margin-top: 20px;"></div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>

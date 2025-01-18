@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  font-size: 1rem;
+}
+
+body {
+    background-color: #1c1e22;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    color: #ecf0f1; 
+}
+
+.container {
+    background-color: #2e353f;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
+    width: 450px;
+    text-align: center;
+    animation: fadeIn 0.5s;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+h2 { 
+    color: #ecf0f1; 
+    margin-bottom: 20px; 
+    font-size: 1.5rem !important;
+}
+
+p a{
+    color: #4CAF50;
+}
+
+.password-container {
+    position: relative;
+}
+
+input[type="password"], 
+input[type="text"] { /* Target both password and text input styles */
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px; /* Maintain spacing for uniformity */
+    border: 1px solid #444;
+    border-radius: 5px;
+    background-color: #3a3e43;
+    color: #ecf0f1;
+    font-size: 1rem;
+}
+
+input::placeholder { 
+    color: #aab2b7; 
+}
+
+#togglePassword,#toggleLoginPassword {
+    position: absolute;
+    right: 10px;
+    top: 60%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    font-size: 12px;
+    color: #ecf0f1;
+}
+
+button {
+    margin-top: 20px; /* Add margin for spacing */
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    background-color: #4CAF50; /* Change background color for the button */
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #45a049; /* Darken the button on hover */
+}
+
+.button-container {
+    display: flex; /* Use Flexbox to align items */
+    justify-content: center; /* Center items horizontally */
+    margin: 20px 0; /* Add spacing above and below buttons */
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 15px;
+}
+
+li {
+    text-align: left;
+    margin: 5px 0;
+    padding-left: 25px;
+    position: relative;
+    color: #aab2b7;
+    font-size: 15px;
+}
+
+li::before {
+    content: '✔';
+    position: absolute;
+    left: 0;
+    visibility: hidden;
+    color: #2ecc71;
+}
+
+li.fulfilled::before { 
+    visibility: visible; 
+}
+
+#progressContainer {
+    width: 100%;
+    background-color: #444;
+    border-radius: 5px;
+    height: 10px;
+    margin-top: 10px;
+}
+
+#progressBar {
+    height: 100%;
+    width: 0;
+    border-radius: 5px;
+    transition: width 0.3s;
+}
+
+.progress-weak { background-color: #e74c3c; }
+.progress-medium { background-color: #f39c12; }
+.progress-strong { background-color: #2ecc71; }
+
+.strength-weak { color: #e74c3c; }
+.strength-medium { color: #f39c12; }
+.strength-strong { color: #2ecc71; }

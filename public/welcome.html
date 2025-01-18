@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome!</h1>
+        <p id="welcomeMessage"></p>
+        <button id="logoutButton">Logout</button>
+    </div>
+
+    <script>
+        // Display a welcome message
+        const welcomeMessage = document.getElementById("welcomeMessage");
+        const username = localStorage.getItem("username"); // Assuming you save the username in localStorage
+        welcomeMessage.textContent = `Hello, ${username}!`;
+
+        // Logout functionality
+        document.getElementById("logoutButton").addEventListener("click", () => {
+            localStorage.removeItem("username"); // Remove username from localStorage
+            window.location.href = "login.html"; // Redirect to login page
+        });
+    </script>
+</body>
+</html>

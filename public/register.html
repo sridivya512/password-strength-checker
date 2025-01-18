@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Register</h2>
+        
+        <!-- Username input field for registration -->
+        <input type="text" id="usernameInput" placeholder="Enter your username" required>
+        
+        <!-- Password input field -->
+        <div class="password-container">
+            <input type="password" id="passwordInput" placeholder="Enter your password" required>
+            <span id="togglePassword" class="fa-solid fa-eye"></span> <!-- Eye Icon -->
+        </div>
+
+         <!-- Generate Password button -->
+        <button id="generatePasswordButton" style="display: none;">Generate Password</button>
+
+        <!-- Password strength criteria -->
+        <ul id="passwordCriteria" style="display: none;">
+            <li id="length">At least 8 characters</li>
+            <li id="uppercase">At least 1 uppercase letter</li>
+            <li id="lowercase">At least 1 lowercase letter</li>
+            <li id="number">At least 1 number</li>
+            <li id="special">At least 1 special character</li>
+        </ul>
+
+        <div id="strengthIndicator" style="display: none; margin-top: 20px;"></div>
+        <div id="progressContainer" style="display: none; margin-top: 10px;">
+            <div id="progressBar"></div>
+        </div>
+
+        <!-- Register button -->
+        <button id="registerButton">Register</button>
+
+        <div id="registrationMessage" style="margin-top: 20px;"></div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
